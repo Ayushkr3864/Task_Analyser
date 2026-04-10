@@ -6,7 +6,7 @@ export default function TaskPage() {
   const [title, setTitle] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const API = "https://task-analyser-75tk.onrender.com";
+  const API = "https://task-analyser-75tk.onrender.com/tasks";
    
   // fetch tasks
   const fetchTasks = async () => {
