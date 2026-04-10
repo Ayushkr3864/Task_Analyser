@@ -1,4 +1,4 @@
-const MongoURI = "mongodb://localhost:27017/tasks";
+const MongoURI = process.env.MONGO_URI ;
 console.log(MongoURI);
 
 const mongoose = require("mongoose");

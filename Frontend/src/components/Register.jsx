@@ -22,7 +22,7 @@ export default function Register() {
     setLoading(true);
 
     try {
-      await axios.post("http://localhost:5000/users/register", form);
+      await axios.post("http://localhost:5000/register", form);
 
       // slight delay feels intentional (not forced)
       setTimeout(() => {
