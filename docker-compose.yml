@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend
+    container_name: task_backend
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/taskdb
+      - PORT=3000
+    depends_on:
+      - mongo
+    networks:
+      - task-network
+
+  frontend:
+    build: ./frontend
+    container_name: task_frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    networks:
+      - task-network
+
+  mongo:
+    image: mongo:6
+    container_name: task_mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - task-network
+
+volumes:
+  mongo_data:
+
+networks:
+  task-network:
