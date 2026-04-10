@@ -1,5 +1,4 @@
 const MongoURI = process.env.MONGO_URI ;
-console.log(MongoURI);
 
 const mongoose = require("mongoose");
 
