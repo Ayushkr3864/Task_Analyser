@@ -6,7 +6,7 @@ export default function TaskPage() {
   const [title, setTitle] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const API = "http://localhost:5000/tasks";
+  const API = "https://task-analyser-75tk.onrender.com";
    
   // fetch tasks
   const fetchTasks = async () => {
@@ -71,7 +71,7 @@ export default function TaskPage() {
     const handleLogout = async () => {
       try {
         await axios.post(
-          "http://localhost:5000/logout",
+          "https://task-analyser-75tk.onrender.com/logout",
           {},
           { withCredentials: true },
         );

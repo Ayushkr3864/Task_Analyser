@@ -22,7 +22,10 @@ export default function Register() {
     setLoading(true);
 
     try {
-      await axios.post("http://localhost:5000/register", form);
+      await axios.post(
+        "https://task-analyser-75tk.onrender.com/register",
+        form,
+      );
 
       // slight delay feels intentional (not forced)
       setTimeout(() => {

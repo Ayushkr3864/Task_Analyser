@@ -9,7 +9,7 @@ export default function ProtectedRoute({ children }) {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        await axios.get("http://localhost:5000/isAuth", {
+        await axios.get("https://task-analyser-75tk.onrender.com/isAuth", {
           withCredentials: true,
         });
         setIsAuth(true);
