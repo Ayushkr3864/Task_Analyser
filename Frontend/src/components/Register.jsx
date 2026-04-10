@@ -26,7 +26,7 @@ export default function Register() {
 
       // slight delay feels intentional (not forced)
       setTimeout(() => {
-        navigate("/login");
+        navigate("/");
       }, 800);
     } catch (err) {
       setError(err.response?.data?.error || "registration failed");
